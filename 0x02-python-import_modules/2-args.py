@@ -11,5 +11,6 @@ if __name__ == "__main__":
         print(f"{length} arguments:")
         while index < length:
             print(f"{index + 1}: {lists[index + 1]}")
+            index += 1
     else:
         print("0 arguments.")
