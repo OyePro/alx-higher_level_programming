@@ -5,3 +5,4 @@ def square_matrix_simple(matrix=[]):
         for i in matrix:
             result.append(i**2)
         return (result)
+    return None
