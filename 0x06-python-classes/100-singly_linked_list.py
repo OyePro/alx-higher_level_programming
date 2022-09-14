@@ -13,10 +13,8 @@ class Node:
 
         """Initialize Node Class"""
 
-        self.__data = data
-        self.__next_node = next_node
-        if type(value) is not int:
-            raise TypeError("data must be an integer")
+        self.data = data
+        self.next_node = next_node
 
     @property
     def data(self):
