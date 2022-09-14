@@ -69,7 +69,7 @@ class Square:
         """method for printing square"""
 
         if self.__size == 0:
-            print()
+            print("")
         else:
             print("\n" * self.__position[1], end="")
             print("\n".join([" " * self.__position[0] + "#" * self.__size

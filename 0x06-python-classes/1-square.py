@@ -13,4 +13,4 @@ class Square:
 
         """Initialize the class"""
 
-        self.__self = size
+        self.__size = size
