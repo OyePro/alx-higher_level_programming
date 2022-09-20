@@ -10,7 +10,7 @@ class Rectangle:
     """Rectangle Class"""
 
     number_of_instances = 0
-    
+
     def __init__(self, width=0, height=0):
 
         """Initialization of class rectangle
@@ -94,7 +94,7 @@ class Rectangle:
             result += ("\n".join(["#" * self.__width for rows in
                                   range(self.__height)]))
             return result
- 
+
     def __repr__(self):
         """Method to return string representation"""
         type(self).number_of_instances += 1

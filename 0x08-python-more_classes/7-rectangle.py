@@ -92,10 +92,10 @@ class Rectangle:
         if self.__height == 0 or self.__width == 0:
             return result
         else:
-            result += ("\n".join([str(self.print_symbol) * self.__width for rows in
-                                  range(self.__height)]))
+            result += ("\n".join([str(self.print_symbol) * self.__width
+                                  for rows in range(self.__height)]))
             return result
- 
+
     def __repr__(self):
         """Method to return string representation"""
         type(self).number_of_instances += 1
