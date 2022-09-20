@@ -105,4 +105,3 @@ class Rectangle:
         """Method to deletes instance of class """
         type(self).number_of_instances -= 1
         print("Bye rectangle...")
-        

@@ -88,4 +88,3 @@ class Rectangle:
             result += ("\n".join(["#" * self.__width for rows in
                                   range(self.__height)]))
             return result
-            
