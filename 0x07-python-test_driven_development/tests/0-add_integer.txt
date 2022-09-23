@@ -1,0 +1,35 @@
+==================================================
+ Using doctest to test function add_integer(a, b)
+==================================================
+ 
+ ``Importing add_integer(a, b)``
+
+>>> add_integer = __import__('0-add_integer').add_integer
+ 
+ ``Testing add_integer() with numbers(int and float)``
+
+ >>> add_integer(1, 2)
+ 3
+ >>> add_integer(100, -2)
+ 98
+ >>> add_integer(2)
+ 100
+ >>> add_integer(100.3, -2)
+ 98
+
+  ``Testing add_integer() with not int or float``
+
+  >>> try:
+  ...     add_integer(4, "School")
+  ... except Exception as e:
+  ...     print(e)
+  ...
+  b must be an integer
+  >>> try:
+  ...     add_integer(None)
+  ...
+  ... except Exception as e:
+  ...     print(e)
+  ...
+  a must be an integer
+  
