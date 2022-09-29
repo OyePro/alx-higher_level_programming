@@ -12,4 +12,3 @@ def inherits_from(obj, a_class):
     name implies
     """
     return (type(obj) is not a_class and issubclass(type(obj), a_class))
- 
