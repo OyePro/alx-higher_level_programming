@@ -88,7 +88,7 @@ Test parameter must be list.
     >>> print(lazy_matrix_mul(None, None))
     Traceback (most recent call last):
     ...
-    ValueError: Object arrays are not currently supported
+    TypeError: Object arrays are not currently supported
 
 Test whether it's a list of lists
 ::

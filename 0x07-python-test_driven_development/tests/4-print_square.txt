@@ -21,7 +21,6 @@
     ###
     ###
     >>> print_square(0)
-    <BLANKLINE>
 
 ``Testing the exception raised in the function``
 ::
