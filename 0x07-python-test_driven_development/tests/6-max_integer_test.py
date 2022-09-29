@@ -10,6 +10,7 @@ class TestMaxInteger(unittest.TestCase):
     """run test with python3 -m unittest -v tests.6-max_integer_test"""
 
     def test_max_integer(self):
+        self.assertEqual(max_integer([0]), 0)
         self.assertEqual(max_integer([2, 9, 6, 8]), 9)
         self.assertEqual(max_integer([3, 7, 3, 12]), 12)
         self.assertEqual(max_integer([0, 4, -3, -1]), 4)
@@ -46,7 +47,9 @@ class TestMaxInteger(unittest.TestCase):
 
     def test_bool(self):
         self.assertEqual(max_integer([True, False]), True)
-
+    
+    def test_empty_list(self):
+        self.assertIsNone(max_integer([]), None)
 
 if __name__ == "__main__":
     unittest.main()
