@@ -28,7 +28,7 @@
     >>> print_sorted()
     Traceback (most recent call last):
     ...
-    TypeError: MyList.print_sorted() missing 1 required positional argument: 'self'
+    TypeError: print_sorted() missing 1 required positional argument: 'self'
 
     >>> string = "wgthf"
     >>> print_sorted(string)
