@@ -37,7 +37,7 @@ class Base:
         """
         writes the JSON string representation of list_objs to a file
         """
-        obj = "[]"
+        obj = []
         if list_objs is not None:
             for i in list_objs:
                 obj.append(cls.to_dictionary(i))
