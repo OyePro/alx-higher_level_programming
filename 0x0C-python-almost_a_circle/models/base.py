@@ -28,7 +28,7 @@ class Base:
         Returns the JSON string representation of list_dictionaries
         """
         if list_dictionaries is None or list_dictionaries == []:
-            return ("\"[]\"")
+            return "[]"
         else:
             return (json.dumps(list_dictionaries))
 
@@ -37,7 +37,7 @@ class Base:
         """
         writes the JSON string representation of list_objs to a file
         """
-        obj = []
+        obj = "[]"
         if list_objs is not None:
             for i in list_objs:
                 obj.append(cls.to_dictionary(i))
@@ -51,7 +51,7 @@ class Base:
         Returns the list of the JSON string representation json_string
         """
         if json_string is None or len(json_string) == 0:
-            return ("\"[]\"")
+            return []
         else:
             return (json.loads(json_string))
 
