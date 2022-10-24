@@ -178,6 +178,8 @@ class TestBase(unittest.TestCase):
             Square.save_to_file()
         with self.assertRaises(TypeError):
             Square.save_to_file([], [])
+        Square.save_to_file([])
+        Rectangle.save_to_file([])
 
     def test_load_from_file_rect(self):
         r1 = Rectangle(8, 9, 7, 4, 10)
