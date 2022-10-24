@@ -1,4 +1,4 @@
-#!/usr/bin/pytrhon3
+#!/usr/bin/python3
 """
 defining class Rectangle
 it inherits class Base

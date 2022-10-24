@@ -178,8 +178,14 @@ class TestBase(unittest.TestCase):
             Square.save_to_file()
         with self.assertRaises(TypeError):
             Square.save_to_file([], [])
+
+    def test_rect_sq_save_to_file(self):
         Square.save_to_file([])
+        with open("Square.json", 'r') as fsq:
+            self.assertEqual('"[]"', fsq.read())
         Rectangle.save_to_file([])
+        with open("Rectangle.json", 'r') as frect:
+            self.assertEqual('"[]"', frect.read())
 
     def test_load_from_file_rect(self):
         r1 = Rectangle(8, 9, 7, 4, 10)
