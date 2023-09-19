@@ -2,7 +2,7 @@
 """defining class Base"""
 import json
 import csv
-import turtle
+"""import turtle"""
 
 
 class Base:
@@ -124,12 +124,10 @@ class Base:
                 dic = cls.create(**dict)
                 objs.append(dic)
         return (objs)
-
+    """
     @staticmethod
     def draw(list_rectangles, list_squares):
-        """
         method to opens a window and draws all the Rectangles and Squares
-        """
         screen_width = 620
         padding = 10
         row_width = padding
@@ -254,3 +252,4 @@ class Base:
             turtle.right(90)
 
         turtle.getscreen()._root.mainloop()
+        """

@@ -97,8 +97,8 @@ class TestBase(unittest.TestCase):
         self.assertEqual(str, type(Base.to_json_string([s3.to_dictionary()])))
 
     def test_to_json_string_empty_and_None(self):
-        self.assertEqual(Base.to_json_string([]), '"[]"')
-        self.assertEqual(Base.to_json_string(None), '"[]"')
+        self.assertEqual(Base.to_json_string([]), '[]')
+        self.assertEqual(Base.to_json_string(None), '[]')
 
     def test_to_json_string_args(self):
         with self.assertRaises(TypeError):
@@ -131,8 +131,8 @@ class TestBase(unittest.TestCase):
         self.assertEqual(list_dict, Base.from_json_string(json_dict))
 
     def test_from_json_string_empty_and_None(self):
-        self.assertEqual('"[]"', Base.from_json_string(None))
-        self.assertEqual('"[]"', Base.from_json_string(json_string=""))
+        self.assertEqual([], Base.from_json_string(None))
+        self.assertEqual([], Base.from_json_string(json_string=""))
 
     def test_from_json_string_args(self):
         with self.assertRaises(TypeError):
@@ -173,7 +173,7 @@ class TestBase(unittest.TestCase):
     def test_save_to_file_None_and_arg(self):
         Square.save_to_file(None)
         with open("Square.json", 'r') as fp:
-            self.assertEqual('"[]"', fp.read())
+            self.assertEqual('[]', fp.read())
         with self.assertRaises(TypeError):
             Square.save_to_file()
         with self.assertRaises(TypeError):
@@ -182,10 +182,10 @@ class TestBase(unittest.TestCase):
     def test_rect_sq_save_to_file(self):
         Square.save_to_file([])
         with open("Square.json", 'r') as fsq:
-            self.assertEqual('"[]"', fsq.read())
+            self.assertEqual('[]', fsq.read())
         Rectangle.save_to_file([])
         with open("Rectangle.json", 'r') as frect:
-            self.assertEqual('"[]"', frect.read())
+            self.assertEqual('[]', frect.read())
 
     def test_load_from_file_rect(self):
         r1 = Rectangle(8, 9, 7, 4, 10)
