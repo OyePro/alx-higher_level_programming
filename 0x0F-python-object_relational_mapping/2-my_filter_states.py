@@ -16,12 +16,14 @@ if __name__ == "__main__":
                          passwd=argv[2], db=argv[3])
 
     """create cursor to execute queries using sql"""
-    nm = argv[4]
+    name = argv[4]
     cur = db.cursor()
-    cur.execute("SELECT * FROM states WHERE name = %s ORDER BY id ASC", (nm,))
+    cur.execute("SELECT * FROM states WHERE name LIKE '{:s}' ORDER BY id ASC"
+                .format(name))
 
     """getting result from cursor"""
     for row in cur.fetchall():
-        print(row)
+        if row[1] == name:
+            print(row)
     cur.close()
     db.close()

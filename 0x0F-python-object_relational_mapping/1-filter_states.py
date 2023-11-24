@@ -21,6 +21,8 @@ if __name__ == "__main__":
 
     """getting result from cursor"""
     for row in cur.fetchall():
-        print(row)
+        name = row[1]
+        if name[0] == 'N':
+            print(row)
     cur.close()
     db.close()

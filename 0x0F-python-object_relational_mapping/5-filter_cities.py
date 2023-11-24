@@ -26,13 +26,7 @@ if __name__ == "__main__":
                  ORDER BY cities.id ASC""", (nm,))
 
     """getting result from cursor"""
-    lists = ()
-    for row in cur.fetchall():
-        lists += row
-    for i in range(len(lists)):
-        if i < (len(lists) - 1):
-            print(lists[i], end=", ")
-        else:
-            print(lists[i])
+    print(', '.join(['{:s}'.format(row[0]) for row in cur.fetchall()]))
+
     cur.close()
     db.close()
