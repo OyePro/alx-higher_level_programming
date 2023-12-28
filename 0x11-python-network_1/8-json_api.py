@@ -12,7 +12,6 @@ if __name__ == "__main__":
 
     if len(sys.argv) < 2:
         values = {"q": ""}
-
     else:
         values = {"q", sys.argv[1]}
     url = "http://0.0.0.0:5000/search_user"
